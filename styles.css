@@ -1,0 +1,10 @@
+.button {
+    background-color: gainsboro;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.button {border-radius: 50%;}
