@@ -41,13 +41,12 @@ var button6x5 = document.getElementById('button6x5');
 var button6x6 = document.getElementById('button6x6');
 var button6x7 = document.getElementById('button6x7');
 
-
-function changeColor() {
-    document.getElementsByTagName('button').style.background == '#ff0000';
+function changeColor(buttonID) {
+    ducument.getElementById(buttonID).style.background = '#ff0000';
 }
 
-button1x1.addEventListener('click', changeColor);
-button1x2.addEventListener('click', changeColor);
+button1x1.addEventListener('click', changeColor(button1x1));
+button1x2.addEventListener('click', changeColor(button1x2));
 button1x3.addEventListener('click', changeColor);
 button1x4.addEventListener('click', changeColor);
 button1x5.addEventListener('click', changeColor);
