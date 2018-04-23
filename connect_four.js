@@ -8,6 +8,12 @@ var tableVar = [[0, 0, 0, 0, 0, 0, 0],
 
 function changeColor(buttonID) {
     buttonID.style.background = '#ff0000';
+
+    if (buttonID.style.background === '#ff0000') {
+    } else {
+        buttonID.style.background = '#000000';
+    }
+
 }
 
 var tablearea = document.getElementById('tablearea');
