@@ -6,13 +6,8 @@ var tableVar = [[0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0]];
 
 
-function changeColor(buttonID) {
-    buttonID.style.background = '#ff0000';
-
-    if (buttonID.style.background === '#ff0000') {
-    } else {
-        buttonID.style.background = '#000000';
-    }
+function changeColor(e) {
+    e.currentTarget.style.background = '#ff0000';
 
 }
 
@@ -28,6 +23,7 @@ for (var i = 1; i < 7; i++) {
         td1 = td1.appendChild(button);
         button.setAttribute('class', 'button');
         button.setAttribute('id', 'button' + i + 'x' + j);
+        var buttonID = document.getElementById('button' + i + 'x' + j);
         button.addEventListener('click', changeColor);
         tr[i].appendChild(td1);
     }
