@@ -16,9 +16,11 @@ function changeColor(e) {
      e.currentTarget.style.background = '#000000';
     turnCount++
     return document.getElementById('message').textContent = "Player 2";
+
     return document.getElementsByTagName('h2').style.textColor= "#ff0000";
     }
 }
+
 
 var tablearea = document.getElementById('tablearea');
 var table = document.createElement('table');
