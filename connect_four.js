@@ -30,13 +30,13 @@ var table = document.createElement('table');
 tablearea.appendChild(table);
 var tr = [];
 var td = document.createElement('td');
-for (var i = 1; i < 7; i++) {
+for (var i = 0; i < 6; i++) {
     tr[i] = document.createElement('tr');
-    for (var j = 1; j < 8; j++) {
+    for (var j = 0; j < 7; j++) {
         var button = document.createElement('button');
         td = td.appendChild(button);
         button.setAttribute('class', 'button');
-        button.setAttribute('id', 'button' + i + 'x' + j);
+        button.id = i + 'x' + j
         button.addEventListener('click', changeColor);
         tr[i].appendChild(td);
     }
