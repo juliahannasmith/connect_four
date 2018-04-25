@@ -1,3 +1,4 @@
+var turnCount = 1;
 var tableVar = [[0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
@@ -7,9 +8,17 @@ var tableVar = [[0, 0, 0, 0, 0, 0, 0],
 
 
 function changeColor(e) {
+    if(turnCount%2 == 0){
     e.currentTarget.style.background = '#ff0000';
-
+    turnCount++
+    return document.getElementById('message').textContent = "Player 1";
+    } else {
+     e.currentTarget.style.background = '#000000';
+    turnCount++
+    return document.getElementById('message').textContent = "Player 2";
+    }
 }
+
 
 var tablearea = document.getElementById('tablearea');
 var table = document.createElement('table');
