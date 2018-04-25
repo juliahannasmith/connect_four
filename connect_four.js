@@ -8,16 +8,19 @@ var tableVar = [[0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0]];
 
 function changeColor(e) {
-    if(turnCount%2 == 0){
-    e.currentTarget.style.background = '#ff0000';
-    turnCount++
-    return document.getElementById('message').textContent = "Player 1";
-    } else {
-     e.currentTarget.style.background = '#000000';
-    turnCount++
-    return document.getElementById('message').textContent = "Player 2";
+    if (e.currentTarget.style.background == "#ff0000"||e.currentTarget.style.background == "#000000") {
+        return document.getElementById('message').textContent = "INVALID MOVE!!!";
 
-    return document.getElementsByTagName('h2').style.textColor= "#ff0000";
+    } else {
+        if (turnCount % 2 == 0) {
+            e.currentTarget.style.background = '#ff0000';
+            turnCount++
+            return document.getElementById('message').textContent = "Player 1";
+        } else {
+            e.currentTarget.style.background = '#000000';
+            turnCount++
+            return document.getElementById('message').textContent = "Player 2";
+        }
     }
 }
 
