@@ -7,6 +7,10 @@ var tableVar = [[0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0]];
 
+function sum(){
+    for (var i = 0, sum = 0; i < board.length; sum += board[i++]);
+
+}
 function changeColor(e) {
     if (e.currentTarget.style.background == "#ff0000"||e.currentTarget.style.background == "#000000") {
         return document.getElementById('message').textContent = "INVALID MOVE!!!";
