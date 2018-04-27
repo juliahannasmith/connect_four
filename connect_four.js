@@ -1,30 +1,26 @@
 var turnCount = 1;
 
-var tableVar = [[0, 0, 0, 0, 0, 0, 0],
+var board = [[0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0]];
 
-function sum(){
-    for (var i = 0, sum = 0; i < board.length; sum += board[i++]);
-
 }
 function changeColor(e) {
-    if (e.currentTarget.style.background == "#ff0000"||e.currentTarget.style.background == "#000000") {
-        return document.getElementById('message').textContent = "INVALID MOVE!!!";
-
+    if (turnCount % 2 == 0) {
+        board[button.id.charAt(0)-1][button.id.charAt(3)-1] = 1
+        e.currentTarget.style.background = '#ff0000';
+        document.getElementById('message').textContent = "Player 1";
+        document.getElementById('message').style.color = "#000000";
+        turnCount++
     } else {
-        if (turnCount % 2 == 0) {
-            e.currentTarget.style.background = '#ff0000';
-            turnCount++
-            return document.getElementById('message').textContent = "Player 1";
-        } else {
-            e.currentTarget.style.background = '#000000';
-            turnCount++
-            return document.getElementById('message').textContent = "Player 2";
-        }
+        board[button.id.charAt(0)-1][button.id.charAt(3)-1] = -1
+        e.currentTarget.style.background = '#000000';
+        document.getElementById('message').textContent = "Player 2";
+        document.getElementById('message').style.color = "#ff0000";
+        turnCount++
     }
 }
 
