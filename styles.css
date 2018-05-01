@@ -7,5 +7,12 @@
 }
 
 .message {
-    color = "#000000"
+    color: "#000000";
+}
+
+.loadbutton {
+    padding: 20px;
+    background-color: darkgreen;
+    color: whitesmoke;
+    border-radius: 10px;
 }
