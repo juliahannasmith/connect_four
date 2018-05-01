@@ -7,7 +7,6 @@ var board = [[0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0]];
 
-//Function called for each button clicked
 var color = 0
 
 function checkWin(e) {
@@ -16,9 +15,6 @@ function checkWin(e) {
     console.log(array)
     var position = board[e.currentTarget.id.charAt(0)][e.currentTarget.id.charAt(2)];
     console.log(position)
-    //If for horizontal win
-    //for loop for position in the array
-    //check for same array dif position
     if (color == 1) {
         if (x) {
             document.getElementById('message').textContent = "Player 1 wins!";
@@ -32,14 +28,6 @@ function checkWin(e) {
             document.getElementById('message').textContent = "Player 1 wins!";
         }
     }
-    //If for vertical win
-    //for loop for dif array same position
-    //check for dif array same position
-
-    //If for diagonal win #1
-    //check for dif array and dif position going up to the right
-    //If for diagonal win #2
-    //check for dif array and dif position ging up to the left
 }
 
 function changeColor(e) {
